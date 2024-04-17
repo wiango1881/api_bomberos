@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('incendios', 10)->nullable();
             $table->string('recomend_incendios', 10)->nullable();
             $table->text('descripcion')->nullable();
-            $table->test('antecedentes_emerg')->nullable();
+            $table->text('antecedentes_emerg')->nullable();
             $table->timestamps();
         });
     }
