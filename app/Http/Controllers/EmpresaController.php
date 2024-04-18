@@ -15,7 +15,7 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        $empresas = Empresa::all();
     }
 
     /**
@@ -45,9 +45,13 @@ class EmpresaController extends Controller
      * @param  \App\Models\Empresa  $empresa
      * @return \Illuminate\Http\Response
      */
-    public function show(Empresa $empresa)
+    public function show($id)
     {
-        //
+        $empresa = Empresa::find($id);
+
+        return response()->json([
+            'empresa' => $empresa
+        ]);
     }
 
     /**
